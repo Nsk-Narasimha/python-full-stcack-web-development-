@@ -12,7 +12,8 @@ print(type(users))
 for i in range(len(email_id)):
     users[i+1]=email_id[i]
 
-print(*enumerate(email_id,1))
+print(dict(enumerate(email_id,1)))
+
 #users=dict.(email_id)
 
 
