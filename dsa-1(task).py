@@ -99,4 +99,49 @@ print("\nFinal unique names:")
 for name in unique_names:
     print(name)
 
+print("The two sets are disjoint: False")
+    
+
+#  5: Course Student Comparison
+
+python_students = {"Asha", "Rahul", "John", "Meera"}
+da_students = {"Rahul", "Meera", "Arun"}
+
+all_students = python_students.union(da_students)
+
+print("\nAll students from both courses:")
+for student in all_students:
+    print(student)
+
+both_courses = python_students.intersection(da_students)
+
+print("\nStudents learning both courses:")
+for student in both_courses:
+    print(student)
+
+only_python = python_students.difference(da_students)
+
+print("\nStudents learning only Python:")
+for student in only_python:
+    print(student)
+
+only_one_course = python_students.symmetric_difference(da_students)
+
+print("\nStudents learning only one course:")
+for student in only_one_course:
+    print(student)
+
+if da_students.issubset(python_students):
+    print("\nDA students are a subset of Python students: True")
+else:
+    print("\nDA students are a subset of Python students: False")
+
+if python_students.issuperset(da_students):
+    print("Python students are a superset of DA students: True")
+else:
+    print("Python students are a superset of DA students: False")
+
+if python_students.isdisjoint(da_students):
+    print("The two sets are disjoint: True")
+else:
     print("The two sets are disjoint: False")
