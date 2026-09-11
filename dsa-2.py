@@ -14,7 +14,7 @@ for i in range(n_of_t_user_input):
         else:print("obesity-class3/severe obesity")
     else:print("make sure to enter only +ve values")
 '''
-n_of_t_user_input=int(input("enter the values"))
+n_of_t_user_input=int(input("enter the value:"))
 while(n_of_t_user_input):
     try:
         weight=float(input("enter the weight in kgs:"))
