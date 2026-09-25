@@ -91,24 +91,37 @@ d=dog()
 d.sounds()
 c=cat()
 c.sounds()
-
+'''
 class amozon():
-    def products(self):
-        print("products you bought:",end='')
-    def addproducts(self):
+    product=["umbrella","raincoat"]
+    def products(self,pro):
+        if(pro in self.product):
+            print("yes it was avaialable")
+        #print("products you bought:",end='')
+    def addproducts(self,*args):
         print("you added items:",end='')
+        self.product.extend([*args])
+    def veiwproducts(self):
+        print("product",self.product)
+    
 class users(amozon):
     def buy(self,*args):
-        super().products()
+        arg=[*args]
+        print(arg)
+        for i in (arg):
+            super().products(i)
+            print(i)
+        
         print(*args)
 class shop(amozon):
     def add(self,*args):
-        super().addproducts()
-        print(*args)
-#u1=users()
-#u1.buy("toy car","bat","curtain")
+        super().addproducts(*args)
 s1=shop()
-s1.add("toys")
+s1.add(*(input("enter products you want to add:").lower().split()))    
+u1=users()
+u1.veiwproducts()
+u1.buy(*(input("enter products you want:").lower().split()))
+
 '''
 #polymorphism>>>method,operator overloading,method overriding
 #poly-many,morph-forms
@@ -123,7 +136,7 @@ class Hotstar:
 u1=Hotstar()
 u1.watch("leo")
 
-
+'''
 
 
 
